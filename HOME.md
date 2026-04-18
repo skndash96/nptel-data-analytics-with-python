@@ -2,13 +2,6 @@
 
 Week-wise concise study notes for the NPTEL course, rewritten into clean Markdown with key formulas and quick revision structure.
 
-## What this repository contains
-
-- Formatted notes for Week 1 to Week 12
-- Formula-friendly Markdown (KaTeX-compatible in Docsify)
-- A lightweight docs site (`index.html`) powered by Docsify
-- Sidebar navigation and per-week page headings
-
 ## Weekly notes
 
 - [Week 1](#/week_1_formatted)
