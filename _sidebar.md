@@ -1,0 +1,25 @@
+- [Home](/#/README)
+- Week 1
+  - [Analytics and Foundations](/#/week_1_formatted)
+- Week 2
+  - [Probability and Distributions](/#/week_2_formatted)
+- Week 3
+  - [Sampling and Confidence Intervals](/#/week_3_formatted)
+- Week 4
+  - [Hypothesis Testing Essentials](/#/week_4_formatted)
+- Week 5
+  - [ANOVA and Two-Sample Testing](/#/week_5_formatted)
+- Week 6
+  - [ANOVA and Simple Regression](/#/week_6_formatted)
+- Week 7
+  - [Diagnostics and Multiple Regression](/#/week_7_formatted)
+- Week 8
+  - [MLE and Logistic Regression](/#/week_8_formatted)
+- Week 9
+  - [ROC and Model Building](/#/week_9_formatted)
+- Week 10
+  - [Chi-Square and Clustering Intro](/#/week_10_formatted)
+- Week 11
+  - [Distance Metrics and Clustering](/#/week_11_formatted)
+- Week 12
+  - [HAC and CART Trees](/#/week_12_formatted)

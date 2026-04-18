@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Week-wise NPTEL Data Analytics with Python study notes with concise explanations, formulas, and quick revision points." />
+  <meta name="keywords" content="NPTEL, Data Analytics with Python, IIT Roorkee, statistics, probability, regression, clustering, study notes" />
+  <meta name="author" content="skndash96" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="canonical" href="https://github.com/skndash96/nptel-data-analytics-with-python" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NPTEL Data Analytics with Python" />
+  <meta property="og:title" content="NPTEL Data Analytics with Python" />
+  <meta property="og:description" content="Week-wise concise study notes with formulas for NPTEL Data Analytics with Python." />
+  <meta property="og:url" content="https://github.com/skndash96/nptel-data-analytics-with-python" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/skndash96/nptel-data-analytics-with-python/main/pfp.jpeg" />
+  <meta property="og:image:alt" content="NPTEL Data Analytics with Python" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NPTEL Data Analytics with Python" />
+  <meta name="twitter:description" content="Week-wise concise study notes with formulas for NPTEL Data Analytics with Python." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/skndash96/nptel-data-analytics-with-python/main/pfp.jpeg" />
+
+  <title>NPTEL Data Analytics with Python</title>
+  <link rel="icon" type="image/jpeg" href="pfp.jpeg" />
+  <link rel="apple-touch-icon" href="pfp.jpeg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalWebSite",
+      "name": "NPTEL Data Analytics with Python",
+      "description": "Week-wise concise study notes with formulas for NPTEL Data Analytics with Python.",
+      "url": "https://github.com/skndash96/nptel-data-analytics-with-python",
+      "author": {
+        "@type": "Person",
+        "name": "skndash96",
+        "url": "https://github.com/skndash96/nptel-data-analytics-with-python"
+      },
+      "inLanguage": "en"
+    }
+  </script>
+  <style>
+    :root {
+      --week-header-height: 52px;
+      --week-header-bg: #0f172a;
+      --week-header-fg: #f8fafc;
+      --footer-fg: #475569;
+    }
+
+    body {
+      margin-top: var(--week-header-height);
+    }
+
+    #week-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--week-header-height);
+      background: var(--week-header-bg);
+      color: var(--week-header-fg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      z-index: 9999;
+      padding: 0 16px;
+      text-align: center;
+    }
+
+    .content {
+      padding-bottom: 60px;
+    }
+
+    .custom-footer {
+      margin-top: 24px;
+      padding-top: 14px;
+      border-top: 1px solid #e2e8f0;
+      color: var(--footer-fg);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="week-header">Course Overview and Weekly Index</div>
+
+  <script>
+    window.$docsify = {
+      name: "NPTEL Data Analytics with Python",
+      repo: "",
+      loadSidebar: true,
+      subMaxLevel: 2,
+      homepage: "README.md",
+      auto2top: true,
+      search: {
+        maxAge: 86400000,
+        paths: "auto",
+        placeholder: "Search notes",
+        noData: "No results"
+      },
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "math") {
+              return "$$" + code + "$$";
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
+      plugins: [
+        function (hook) {
+          var weekTitles = {
+            "#/README": "Course Overview and Weekly Index",
+            "#/week_1_formatted": "Week 1: Analytics and Foundations",
+            "#/week_2_formatted": "Week 2: Probability and Distributions",
+            "#/week_3_formatted": "Week 3: Sampling and Confidence Intervals",
+            "#/week_4_formatted": "Week 4: Hypothesis Testing Essentials",
+            "#/week_5_formatted": "Week 5: ANOVA and Two-Sample Testing",
+            "#/week_6_formatted": "Week 6: ANOVA and Simple Regression",
+            "#/week_7_formatted": "Week 7: Diagnostics and Multiple Regression",
+            "#/week_8_formatted": "Week 8: MLE and Logistic Regression",
+            "#/week_9_formatted": "Week 9: ROC and Model Building",
+            "#/week_10_formatted": "Week 10: Chi-Square and Clustering Intro",
+            "#/week_11_formatted": "Week 11: Distance Metrics and Clustering",
+            "#/week_12_formatted": "Week 12: HAC and CART Trees"
+          };
+
+          hook.doneEach(function () {
+            var rawRoute = window.location.hash || "#/README";
+            var route = rawRoute.split("?")[0];
+            var header = document.getElementById("week-header");
+            if (header) {
+              header.textContent = weekTitles[route] || "NPTEL Data Analytics with Python";
+            }
+
+            var content = document.querySelector(".content");
+            if (content && !content.querySelector(".custom-footer")) {
+              var footer = document.createElement("div");
+              footer.className = "custom-footer";
+              footer.innerHTML = 'Made with fear by <a href="https://github.com/skndash96/nptel-data-analytics-with-python" target="_blank" rel="noopener">skndash96</a>';
+              content.appendChild(footer);
+            }
+          });
+        }
+      ]
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+</body>
+</html>
