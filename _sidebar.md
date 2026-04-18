@@ -1,25 +1,25 @@
-- [Home](#/HOME)
+- [Home](README.md)
 - Week 1
-  - [Analytics and Foundations](#/week_1_formatted)
+  - [Analytics and Foundations](week_1_formatted.md)
 - Week 2
-  - [Probability and Distributions](#/week_2_formatted)
+  - [Probability and Distributions](week_2_formatted.md)
 - Week 3
-  - [Sampling and Confidence Intervals](#/week_3_formatted)
+  - [Sampling and Confidence Intervals](week_3_formatted.md)
 - Week 4
-  - [Hypothesis Testing Essentials](#/week_4_formatted)
+  - [Hypothesis Testing Essentials](week_4_formatted.md)
 - Week 5
-  - [ANOVA and Two-Sample Testing](#/week_5_formatted)
+  - [ANOVA and Two-Sample Testing](week_5_formatted.md)
 - Week 6
-  - [ANOVA and Simple Regression](#/week_6_formatted)
+  - [ANOVA and Simple Regression](week_6_formatted.md)
 - Week 7
-  - [Diagnostics and Multiple Regression](#/week_7_formatted)
+  - [Diagnostics and Multiple Regression](week_7_formatted.md)
 - Week 8
-  - [MLE and Logistic Regression](#/week_8_formatted)
+  - [MLE and Logistic Regression](week_8_formatted.md)
 - Week 9
-  - [ROC and Model Building](#/week_9_formatted)
+  - [ROC and Model Building](week_9_formatted.md)
 - Week 10
-  - [Chi-Square and Clustering Intro](#/week_10_formatted)
+  - [Chi-Square and Clustering Intro](week_10_formatted.md)
 - Week 11
-  - [Distance Metrics and Clustering](#/week_11_formatted)
+  - [Distance Metrics and Clustering](week_11_formatted.md)
 - Week 12
-  - [HAC and CART Trees](#/week_12_formatted)
+  - [HAC and CART Trees](week_12_formatted.md)

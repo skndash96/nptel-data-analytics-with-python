@@ -109,9 +109,6 @@
       markdown: {
         renderer: {
           code: function(code, lang) {
-            if (lang === "math") {
-              return "$$" + code + "$$";
-            }
             return this.origin.code.apply(this, arguments);
           }
         }
@@ -120,22 +117,36 @@
         function (hook) {
           var weekTitles = {
             "#/HOME": "Course Overview and Weekly Index",
+            "#/README": "Course Overview and Weekly Index",
+            "#/README.md": "Course Overview and Weekly Index",
             "#/week_1_formatted": "Week 1: Analytics and Foundations",
+            "#/week_1_formatted.md": "Week 1: Analytics and Foundations",
             "#/week_2_formatted": "Week 2: Probability and Distributions",
+            "#/week_2_formatted.md": "Week 2: Probability and Distributions",
             "#/week_3_formatted": "Week 3: Sampling and Confidence Intervals",
+            "#/week_3_formatted.md": "Week 3: Sampling and Confidence Intervals",
             "#/week_4_formatted": "Week 4: Hypothesis Testing Essentials",
+            "#/week_4_formatted.md": "Week 4: Hypothesis Testing Essentials",
             "#/week_5_formatted": "Week 5: ANOVA and Two-Sample Testing",
+            "#/week_5_formatted.md": "Week 5: ANOVA and Two-Sample Testing",
             "#/week_6_formatted": "Week 6: ANOVA and Simple Regression",
+            "#/week_6_formatted.md": "Week 6: ANOVA and Simple Regression",
             "#/week_7_formatted": "Week 7: Diagnostics and Multiple Regression",
+            "#/week_7_formatted.md": "Week 7: Diagnostics and Multiple Regression",
             "#/week_8_formatted": "Week 8: MLE and Logistic Regression",
+            "#/week_8_formatted.md": "Week 8: MLE and Logistic Regression",
             "#/week_9_formatted": "Week 9: ROC and Model Building",
+            "#/week_9_formatted.md": "Week 9: ROC and Model Building",
             "#/week_10_formatted": "Week 10: Chi-Square and Clustering Intro",
+            "#/week_10_formatted.md": "Week 10: Chi-Square and Clustering Intro",
             "#/week_11_formatted": "Week 11: Distance Metrics and Clustering",
-            "#/week_12_formatted": "Week 12: HAC and CART Trees"
+            "#/week_11_formatted.md": "Week 11: Distance Metrics and Clustering",
+            "#/week_12_formatted": "Week 12: HAC and CART Trees",
+            "#/week_12_formatted.md": "Week 12: HAC and CART Trees"
           };
 
           hook.doneEach(function () {
-            var rawRoute = window.location.hash || "#/HOME";
+            var rawRoute = window.location.hash || "#/README";
             var route = rawRoute.split("?")[0];
             var header = document.getElementById("week-header");
             if (header) {
@@ -149,6 +160,22 @@
               footer.innerHTML = 'Made with fear by <a href="https://github.com/skndash96/nptel-data-analytics-with-python" target="_blank" rel="noopener">skndash96</a>';
               content.appendChild(footer);
             }
+
+            if (window.renderMathInElement) {
+              var section = document.querySelector(".markdown-section");
+              if (section) {
+                window.renderMathInElement(section, {
+                  delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "$", right: "$", display: false },
+                    { left: "\\(", right: "\\)", display: false },
+                    { left: "\\[", right: "\\]", display: true }
+                  ],
+                  throwOnError: false,
+                  strict: "ignore"
+                });
+              }
+            }
           });
         }
       ]
@@ -157,6 +184,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
 </body>
 </html>
