@@ -49,3 +49,4 @@ Then open:
 - Site title is set to `NPTEL Data Analytics with Python`.
 - Footer text is rendered as: `Made with fear by skndash96`.
 - The name links to: `https://github.com/skndash96/nptel-data-analytics-with-python`.
+- For GitHub Pages compatibility with Docsify sidebar files, `.nojekyll` is included.
