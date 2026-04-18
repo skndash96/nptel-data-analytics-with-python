@@ -9,26 +9,6 @@ Week-wise concise study notes for the NPTEL course, rewritten into clean Markdow
 - A lightweight docs site (`index.html`) powered by Docsify
 - Sidebar navigation and per-week page headings
 
-## Repository structure
-
-- `week_1_formatted.md` ... `week_12_formatted.md`: final study notes
-- `week1.md` ... `week12.md`: source transcripts/raw text
-- `index.html`: Docsify app shell and site configuration
-- `_sidebar.md`: navigation menu for the docs site
-- `HOME.md`: repository overview (this file)
-
-## View locally
-
-Run a static server from the repo root:
-
-```bash
-python3 -m http.server 4173
-```
-
-Then open:
-
-- `http://localhost:4173`
-
 ## Weekly notes
 
 - [Week 1](#/week_1_formatted)
@@ -46,7 +26,4 @@ Then open:
 
 ## Notes
 
-- Site title is set to `NPTEL Data Analytics with Python`.
-- Footer text is rendered as: `Made with fear by skndash96`.
-- The name links to: `https://github.com/skndash96/nptel-data-analytics-with-python`.
-- For GitHub Pages compatibility with Docsify sidebar files, `.nojekyll` is included.
+- Give the repo a star [here](https://github.com/skndash96/nptel-data-analytics-with-python)

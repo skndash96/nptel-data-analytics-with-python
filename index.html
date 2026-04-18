@@ -98,7 +98,7 @@
       repo: "",
       loadSidebar: true,
       subMaxLevel: 2,
-      homepage: "README.md",
+      homepage: "HOME.md",
       auto2top: true,
       search: {
         maxAge: 86400000,
@@ -119,7 +119,7 @@
       plugins: [
         function (hook) {
           var weekTitles = {
-            "#/README": "Course Overview and Weekly Index",
+            "#/HOME": "Course Overview and Weekly Index",
             "#/week_1_formatted": "Week 1: Analytics and Foundations",
             "#/week_2_formatted": "Week 2: Probability and Distributions",
             "#/week_3_formatted": "Week 3: Sampling and Confidence Intervals",
@@ -135,7 +135,7 @@
           };
 
           hook.doneEach(function () {
-            var rawRoute = window.location.hash || "#/README";
+            var rawRoute = window.location.hash || "#/HOME";
             var route = rawRoute.split("?")[0];
             var header = document.getElementById("week-header");
             if (header) {

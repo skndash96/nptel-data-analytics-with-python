@@ -1,4 +1,4 @@
-- [Home](#/README)
+- [Home](#/HOME)
 - Week 1
   - [Analytics and Foundations](#/week_1_formatted)
 - Week 2
